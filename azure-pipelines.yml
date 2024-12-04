@@ -1,8 +1,5 @@
    pool:
-     name: Default
-     demands:
-      - agent.name -equals DESKTOP-MQ4L9DH
-
+     name: Azure Pipelines
 
    trigger:
      - master
