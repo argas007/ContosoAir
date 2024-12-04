@@ -24,6 +24,7 @@ steps:
     buildType: 'specific'
     project: 'a7d997d8-5470-47e7-8d8f-cd66584a8b29'
     definition: '3'
+    specificBuildWithTriggering: true
     buildVersionToDownload: 'latest'
     targetPath: '$(Pipeline.Workspace)'
 - task: AzureResourceManagerTemplateDeployment@3
@@ -33,7 +34,7 @@ steps:
     subscriptionId: '7b36dff2-b58b-4f2a-a71c-0686d3c20857'
     action: 'Create Or Update Resource Group'
     resourceGroupName: '$(resourcegroup)'
-    location: 'East US 2'
+    location: 'West US 2'
     templateLocation: 'Linked artifact'
     csmFile: '$(Pipeline.Workspace)/drop/Templates/azuredeploy.json'
     csmParametersFile: '$(Pipeline.Workspace)/drop/Templates/azuredeploy.parameters.json'
