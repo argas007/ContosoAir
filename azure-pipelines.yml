@@ -1,5 +1,7 @@
    pool:
      name: Default
+     demands:
+      - agent.name -equals DESKTOP-MQ4L9DH
 
 
    trigger:
